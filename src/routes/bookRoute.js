@@ -8,4 +8,6 @@ router.post("/:userId", bookingController.bookRecipe);
 router.get("/user/:userId", bookingController.getBookingsByUser);
 router.get("/recipe/:recipeId", bookingController.getBookingsByRecipe);
 
+router.delete("/:bookingId", bookingController.deleteBooking);
+
 export default router;

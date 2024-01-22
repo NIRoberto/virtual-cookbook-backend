@@ -15,9 +15,7 @@ async function connectToMongoDB() {
     process.exit(1);
   }
 }
-
 connectToMongoDB();
-
 app.listen(port, () => {
   console.log(`Server is open and running ${port}`);
 });
