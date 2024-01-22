@@ -34,7 +34,7 @@ const bookingController = {
     const { userId } = req.params;
 
     try {
-      const bookings = await Booking.find({ userId });
+      const bookings = await Booking.find({ userId }).populate("recipeId");
 
       return res.status(200).json({ bookings });
     } catch (error) {
